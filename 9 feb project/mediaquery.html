@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query Assignment</title>
+    <!-- Using internal style -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: aquamarine;
+            text-align: center;
+            
+            
+        }
+        /* for larger screens */
+        @media  screen and (max-width: 1440px) {
+            body{
+                background-color: forestgreen;
+                content: "Screen Size: 1440px";
+            }
+            .laptop,.tablet,.mobile{
+                display: none;
+            }
+            .large-screen{
+                padding-top: 10px;
+                display: block;
+            }
+        }
+            /* for laptops */
+        @media  screen and (max-width: 1024px) {
+            body{
+                background-color: darkgoldenrod;
+                content: "Screen Size: 1440px";
+            }
+            .large-screen,.tablet,.mobile{
+                display: none;
+            }
+            .laptop{
+                padding-top: 10px;
+                display: block;
+            }
+        }
+        /* for tablets */
+        @media  screen and (max-width: 768px) {
+            body{
+                background-color: aqua;
+                content: "Screen Size: 1440px";
+            }
+            .large-screen,.laptop,.mobile{
+                display: none;
+            }
+            .tablet{
+                padding-top: 10px;
+                display: block;
+            }
+        }
+        /* for mobile phones */
+        @media  screen and (max-width: 425px) {
+            body{
+                background-color: crimson;
+                content: "Screen Size: 1440px";
+            }
+            .large-screen,.laptop,.tablet{
+                display: none;
+            }
+            .mobile{
+                padding-top: 10px;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>This is Media Query demo page.</h1>
+    <p class="large-screen">Screen Size: 1440px</p>
+    <p class="laptop">Screen Size: 1024px</p>
+    <p class="tablet">Screen Size: 768x</p>
+    <p class="mobile">Screen Size: 425px</p>
+</body>
+</html>
